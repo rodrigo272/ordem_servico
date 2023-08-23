@@ -180,11 +180,9 @@ class Grupos extends BaseController
 
         
         if($grupo->id < 3){
-            return redirect()->back()->with('atencao', 'O grupo <b> '.esc($grupo->nome). ' não pode ser editado');
-
-           /* $retorno['erro'] = 'Por favor, verifique os erros abaixo e tente novamente';
+            $retorno['erro'] = 'Por favor, verifique os erros abaixo e tente novamente';
             $retorno['erros_model'] = ['grupo' => 'O grupo <b>'.esc($grupo->nome). ' não pode ser editado'];
-            return $this->response->setJSON($retorno);*/
+            return $this->response->setJSON($retorno);
         }
       
         //Preenchemos os atributos do Grupo com o metodo post
